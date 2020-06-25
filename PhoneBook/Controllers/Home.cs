@@ -11,9 +11,9 @@ namespace PhoneBook.Controllers
     {
         public IActionResult Index()
         {
-            PersonModel personModel = new PersonModel();
-            var a = personModel.GetPersonList();
-            return View();
+            SourceManager sourceManager = new SourceManager();
+            var list = sourceManager.Get();
+            return View(list);
         }
     }
 }
