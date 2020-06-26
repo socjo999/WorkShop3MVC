@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kasia\\source\\repos\\socjo999\\WorkShop3MVC\\PhoneBook\\PhoneBook.csproj": {}
+    "D:\\CodeLab\\WorkShop3MVC\\PhoneBook\\PhoneBook.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kasia\\source\\repos\\socjo999\\WorkShop3MVC\\PhoneBook\\PhoneBook.csproj": {
+    "D:\\CodeLab\\WorkShop3MVC\\PhoneBook\\PhoneBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kasia\\source\\repos\\socjo999\\WorkShop3MVC\\PhoneBook\\PhoneBook.csproj",
+        "projectUniqueName": "D:\\CodeLab\\WorkShop3MVC\\PhoneBook\\PhoneBook.csproj",
         "projectName": "PhoneBook",
-        "projectPath": "C:\\Users\\kasia\\source\\repos\\socjo999\\WorkShop3MVC\\PhoneBook\\PhoneBook.csproj",
-        "packagesPath": "C:\\Users\\kasia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kasia\\source\\repos\\socjo999\\WorkShop3MVC\\PhoneBook\\obj\\",
+        "projectPath": "D:\\CodeLab\\WorkShop3MVC\\PhoneBook\\PhoneBook.csproj",
+        "packagesPath": "C:\\Users\\wrau\\.nuget\\packages\\",
+        "outputPath": "D:\\CodeLab\\WorkShop3MVC\\PhoneBook\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kasia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wrau\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

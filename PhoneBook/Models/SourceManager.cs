@@ -17,7 +17,7 @@ namespace PhoneBook.Models
             SqlDataReader sqlDataReader;
             SqlCommand sqlCommand = new SqlCommand();
             {
-                sqlCommand.CommandText = $"select Id,FirstName,LastName,Phone,Email,CreationDate,UpdateDate from People";
+                sqlCommand.CommandText = $"select top 100000 Id,FirstName,LastName,Phone,Email,CreationDate,UpdateDate from People";
                 sqlCommand.Connection = connection;
                 sqlDataReader = sqlCommand.ExecuteReader();
                 while (sqlDataReader.Read())

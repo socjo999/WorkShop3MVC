@@ -11,9 +11,8 @@ namespace PhoneBook.Controllers
     {
         public IActionResult Index()
         {
-            SourceManager sourceManager = new SourceManager();
-            var list = sourceManager.Get();
-            return View(list);
+            SourceManager sourceManager = new SourceManager();            
+            return View(sourceManager.Get());
         }
     }
 }
