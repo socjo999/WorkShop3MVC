@@ -37,9 +37,34 @@ namespace PhoneBook.Models
             }
             return PersonList;
         }
-        public void GetById(int Id)
+        public List<PersonModel> GetById(int Id)
         {
- 
+            SqlConnection connection;
+            connection = new SqlConnection();
+            connection.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PhoneBook;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            connection.Open();
+            SqlDataReader sqlDataReader;
+            SqlCommand sqlCommand = new SqlCommand();
+            {
+                sqlCommand.CommandText = $"select top 100000 Id,FirstName,LastName,Phone,Email,CreationDate,UpdateDate from People where id={Id}";
+                sqlCommand.Connection = connection;
+                sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    PersonModel personModel = new PersonModel()
+                    {
+                        Id = (int)sqlDataReader["Id"],
+                        FirstName = (string)sqlDataReader["FirstName"],
+                        LastName = (string)sqlDataReader["LastName"],
+                        Phone = (int)sqlDataReader["Phone"],
+                        Email = (string)sqlDataReader["Email"],
+                        CreationDate = (DateTime)sqlDataReader["CreationDate"],
+                        UpdateDate = (DateTime)sqlDataReader["UpdateDate"]
+                    };
+                    PersonList.Add(personModel);
+                }
+            }
+            return PersonList;
         }
         public List<PersonModel> Add(int Id, string FirstName, string LastName, int Phone, string Email, DateTime CreationDate, DateTime UpdateDate)
         {

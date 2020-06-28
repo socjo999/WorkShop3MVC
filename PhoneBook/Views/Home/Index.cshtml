@@ -29,7 +29,13 @@
                 <td scope="row">@item.LastName</td>
                 <td scope="row">@item.Phone</td>
                 <td scope="row">@item.Email</td>
-                <td scope="row">@item.CreationDate </td>
+                <td scope="row">@item.CreationDate </td>                
+                    @using (Html.BeginForm("Update", "Home", FormMethod.Get))
+                    { 
+                        <td>
+                            <input type="submit" id="Edit" name="Id" value=@item.Id>
+                        </td>
+                    }
             </tr>
         }
     </tbody>
